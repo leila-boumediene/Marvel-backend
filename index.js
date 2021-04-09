@@ -1,11 +1,11 @@
 const express = require("express");
 // je n'ai pas besoins de express formidable car pas de route post
-// const formidable = require("express-formidable");
+const formidable = require("express-formidable");
 const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
-// app.use(formidable());
+app.use(formidable());
 app.use(cors());
 
 // j'appelle mes différentes routes créées
